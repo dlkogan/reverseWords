@@ -1,0 +1,16 @@
+const {expect} = require('chai')
+const reverseWords = require('./reverseWords')
+
+
+describe('Reverse Words', () => {
+  it('An array of words will be reversed', () => {
+    expect(reverseWords(['f','i','s','h',' ','a'])).to.eql(['a',' ','f','i','s','h'])
+  })
+  it('An array with more than two words can be reversed', () => {
+    expect(reverseWords(['s','o',' ','h','i',' ','b','u','d','d','y'])).to.eql(['b','u','d','d','y',' ','h','i',' ','s','o'])
+  })
+  it('Reverses a fairly complex sentence', () => {
+    expect(reverseWords(['h','o','l','e',' ','a',' ','i','n',' ','d','i','e',' ','g','o'])).to.eql(['g','o',' ','d','i','e',' ','i','n',' ','a',' ','h','o','l','e'])
+  })
+
+})
